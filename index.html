@@ -14,6 +14,15 @@
   <p class="catch">研究を楽しく。わかりやすく。6分34秒で伝えます。</p>
 </header>
 
+<!-- モーダル -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close" onclick="closeModal()">×</button>
+    <h2 id="modal-title"></h2>
+    <p id="modal-body"></p>
+  </div>
+</div>
+  
 <main>
   <section>
     <h2>企画について</h2>
@@ -37,7 +46,15 @@
       <tbody>
         <tr>
           <td>10:00–10:06</td>
-          <td><a href="talks/01.html">〇〇に関する研究</a></td>
+          <td>
+            <a href="#" onclick="openModal(
+              '〇〇に関する研究',
+              'この研究では〇〇を対象に、△△の手法を用いて解析を行いました。従来は〜とされていましたが、本研究では〜を明らかにしました。'
+            ); return false;">
+              〇〇に関する研究
+          </a>
+        </td>
+
           <td>山田 太郎（高2）</td>
         </tr>
         <tr>
